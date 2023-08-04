@@ -1,0 +1,12 @@
+
+    participant user
+    participant browser
+    participant server
+
+    user->>browser: Click On Submit Button
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa (With content and timestamp)
+    activate server
+    server-->>browser: HTTP status code 201
+    deactivate server
+
+    
